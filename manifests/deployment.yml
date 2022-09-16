@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: satoshisuyapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: satoshisuyapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: satoshisuyapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: satoshisuyapipelinesjavascriptdocker 
+          image: suyacontainerregistry.azurecr.io/satoshisuyapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
